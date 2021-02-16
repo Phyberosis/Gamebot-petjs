@@ -2,7 +2,6 @@
 const { app, BrowserWindow } = require('electron')
 const sendkeys = require('sendkeys')
 const path = require('path')
-const { send } = require('process')
 
 import * as dp from "./src/dispatcher";
 
