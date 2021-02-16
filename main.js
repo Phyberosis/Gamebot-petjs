@@ -4,7 +4,7 @@ const sendkeys = require('sendkeys')
 const path = require('path')
 const { send } = require('process')
 
-import * as dp from "./dispatcher";
+import * as dp from "./src/dispatcher";
 
 function createWindow() {
   // Create the browser window.
