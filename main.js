@@ -4,6 +4,8 @@ const sendkeys = require('sendkeys')
 const path = require('path')
 const { send } = require('process')
 
+import * as dp from "./dispatcher";
+
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -33,12 +35,8 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 
-  let l = 99999;
-
-  for (let i = 0; i < l; i++) {x
-    sendkeys.sync('x');
-  }
-  console.log('success')
+  let d = new dp.Dispatcher();
+  dp.Begin();
 })
 
 // Quit when all windows are closed.
